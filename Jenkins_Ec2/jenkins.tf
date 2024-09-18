@@ -14,7 +14,7 @@ resource "aws_security_group" "Jenkins-sg" {
 
     }
   ]
-  egress = {
+  egress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
@@ -27,9 +27,9 @@ resource "aws_security_group" "Jenkins-sg" {
 }
 resource "aws_instance" "jenkins-server" {
 
-  ami             = "ami-0f5ee92e2d63afc18"
-  instance_type   = "t2.medium"
-  key_name        = "Mumbai"
+  ami             = "ami-0522ab6e1ddcc7055"
+  instance_type   = "t2.large"
+  key_name        = "AnojPem"
   security_groups = [aws_security_group.Jenkins-sg.name]
   user_data       = file("./install_jenkins.sh")
 

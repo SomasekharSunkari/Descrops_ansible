@@ -8,6 +8,6 @@ sudo apt install ansible -y
 sudo apt install git -y 
 mkdir Ansible && cd Ansible
 pwd
-git clone https://github.com/Aj7Ay/ANSIBLE.git
-cd ANSIBLE
-ansible-playbook -i localhost Jenkins.yml
+git clone https://github.com/SomasekharSunkari/Devsecops_ansible.git
+cd Devsecops_ansible
+ansible-playbook -i localhost Devsecops.yml
